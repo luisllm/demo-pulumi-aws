@@ -13,5 +13,5 @@ Pulumi project that deploys an ECS Task and Service with an nginx container
 # References
 
 - https://www.youtube.com/watch?v=EtEb40LE5zQ
-- https://github.com/beaucarnes/iac-course/blob/main/lab3.py
+- https://github.com/beaucarnes/iac-course/
 
