@@ -1,0 +1,5 @@
+config:
+  aws:region: us-east-1
+  ec2_size: t2.micro
+  vpc_id: vpc-0dfc314f4296b721d
+  public_subnet_name_prefix: test-subnet-public

@@ -1,0 +1,12 @@
+name: iac-lab2
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A minimal AWS Python Pulumi program
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aws-python
+  aws:profile:
+    value: test-luislongo-nvbbandsre
