@@ -9,6 +9,9 @@ Pulumi project that deploys EC2 instances in different AZs, and deploys a public
 - iac-lab3
 Pulumi project that deploys an ECS Task and Service with an nginx container
 
+- my-k8s-cluster
+Pulumi project that deploys an EKS cluster
+
 
 # References
 
