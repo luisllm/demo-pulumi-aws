@@ -20,7 +20,7 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: "us-east-1"
-  PULUMI_STACK: iac-lab2
+  PULUMI_STACK: iac-lab2/dev
   ENVIRONMENT: develop
   S3_BUCKET_PULUMI_STATE: "develop-test-llm-pulumi-state"
 
