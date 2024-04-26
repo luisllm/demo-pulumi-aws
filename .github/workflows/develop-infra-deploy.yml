@@ -79,16 +79,16 @@ jobs:
         run: ls -ltra $HOME
 
       # Select the appropriate stack.
-      - name: Pulumi preview
-        run: pulumi preview
+      #- name: Pulumi preview
+      #  run: pulumi preview
 
-      ## https://github.com/pulumi/actions
-      #- uses: pulumi/actions@v5
-      #  with:
-      #    command: preview
-      #    stack-name: $PULUMI_STACK
-      #  env:
-      #    PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+      # https://github.com/pulumi/actions
+      - uses: pulumi/actions@v5
+        with:
+          command: preview
+          stack-name: $PULUMI_STACK
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
 
       #- name: Login to S3 for state management
       #  run: |
