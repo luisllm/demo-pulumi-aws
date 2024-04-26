@@ -71,6 +71,9 @@ jobs:
       - name: List files
         run: ls -ltr
 
+      - name: aws creds
+        run: cat $HOME/.aws/credentials
+
       # Select the appropriate stack.
       - name: Pulumi preview
         run: pulumi preview
