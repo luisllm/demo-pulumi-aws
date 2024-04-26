@@ -20,7 +20,7 @@ env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: "us-east-1"
-  PULUMI_STACK: iac-lab2/dev
+  PULUMI_STACK: dev
   ENVIRONMENT: develop
   S3_BUCKET_PULUMI_STATE: "develop-test-llm-pulumi-state"
 
@@ -49,16 +49,11 @@ jobs:
       # Installs the Pulumi CLI.
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
-      
-      # Log in to the Pulumi service.
-      - name: Pulumi login
-        uses: pulumi/actions@v3
-        with:
-          command: login
-          stack-name: $PULUMI_STACK
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
-      
+
+      # Init the appropriate stack.
+      - name: List Pulumi stacks
+        run: pulumi stack ls
+
       # Select the appropriate stack.
       - name: Select Pulumi stack
         run: pulumi stack select $PULUMI_STACK
